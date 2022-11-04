@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 const Chocolate = () => {
-    console.log("HELLO")
     return (
             <div>
                 <h1>Chocolate</h1>
