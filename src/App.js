@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 import VendingMachine from './VendingMachine';
 import Chips from './Chips';
@@ -12,10 +12,7 @@ function App() {
   return (
       <main>
       <BrowserRouter>
-      <h2><Link to="/Chocolate">Chocolate x2</Link></h2>
-            <Route exact path="/">
-                <VendingMachine />
-            </Route>
+          <Switch >
             <Route exact path="/Chips">
                 <Chips />
             </Route>
@@ -25,6 +22,10 @@ function App() {
             <Route exact path="/Soda">
                 <Soda />
             </Route>
+            <Route exact path="/">
+                <VendingMachine />
+            </Route>
+          </Switch>
    
       </BrowserRouter>
       </main>
